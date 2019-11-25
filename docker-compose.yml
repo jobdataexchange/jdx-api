@@ -1,0 +1,27 @@
+version: '3'
+services:
+  jdx-postgres:
+    restart: always
+    image: 'postgres:10.4-alpine'
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: jdx_reference_backend_application
+    volumes:
+      - './datastore/postgres:/var/lib/postgresql/data'
+  jdx-api:
+    restart: always
+    build: .
+    environment:
+      ENV_PATH: .env-docker-development
+    ports:
+      - '8000:8000'
+    volumes:
+      - './logs:/logs'
+    depends_on:
+      - jdx-postgres
+
+networks:
+   default:
+     external:
+       name: competensor_default

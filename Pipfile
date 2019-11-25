@@ -1,0 +1,33 @@
+[[source]]
+verify_ssl = true
+url = "https://pypi.org/simple"
+name = "pypi"
+
+[requires]
+python_version = "3.6"
+
+[packages]
+alembic = "*"
+flask = "*"
+flask-sqlalchemy = "*"
+flask-marshmallow = "*"
+flask-migrate = "*"
+flask-restful = "*"
+flask-cors = "*"
+gunicorn = "*"
+"psycopg2" = "==2.8.2"
+python-dotenv = "*"
+textract = {editable = true,git = "https://github.com/brighthive/textract.git"}
+nameko = "*"
+gevent = "*"
+jsphr-converter = {editable = true,git = "https://github.com/jobdataexchange/jdx-internal-jsphr-converter.git",ref = "0.2"}
+boto3 = "*"
+
+[dev-packages]
+autopep8 = "*"
+pocha = "*"
+pylint = "*"
+webtest = "*"
+expects = "*"
+requests-toolbelt = "*"
+docker = "*"
