@@ -1,0 +1,1 @@
+from jdxapi.services.competensor import * 
