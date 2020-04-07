@@ -1,3 +1,7 @@
+This application should be run along side [competensor](https://github.com/jobdataexchange/competensor)
+
+The frontend to walk through the workflow is here, [reference-app-ui](https://github.com/jobdataexchange/reference-app-ui).
+
 ## How to use
 1. Install Docker per their instructions, https://docs.docker.com/install/
 
